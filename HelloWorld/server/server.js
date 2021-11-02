@@ -2,17 +2,13 @@ const {ApolloServer, gql} = require('apollo-server');
 
 const typeDefs = gql`
 
-    schema{
-        query: Sam
-    }
-
-    type Sam{
+    type Query{
         greeting: String        
     }
 `;
 
 const resolvers = {
-    Sam:{
+    Query:{
         greeting: () => 'Hello World!'
     }
 };
